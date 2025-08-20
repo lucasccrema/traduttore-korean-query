@@ -21,7 +21,7 @@ export default async function handler(req, res) {
   body: JSON.stringify({
     model: "gpt-4o-mini",
     messages: [
-      { role: "system", content: "Sei un traduttore. Devi rispondere SOLO con la traduzione in italiano, senza spiegazioni, senza altro testo." },
+      { role: "system", content: "Sei un insegnante di Coreano. Devi rispondere con la traduzione in italiano;  vai a capo e poi dai spiegazioni grammaticali" },
       { role: "user", content: `Traduci in italiano la seguente frase (scritta in coreano): ${frase}` }
     ]
   })
