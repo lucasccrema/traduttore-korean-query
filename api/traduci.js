@@ -39,10 +39,12 @@ const html = `
 <style>
   body {
     background-color: white; /* Sfondo bianco */
-    font-family: sans-serif; /* Opzionale: scegli un font */
+    font-family: Verdana; /* Opzionale: scegli un font */
+    font-size: 12px;
   }
   strong {
     font-weight: bold; /* Testo in grassetto */
+    font-size: 1.2em;
   }
 </style>
 </head>
