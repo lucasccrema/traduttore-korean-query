@@ -21,7 +21,7 @@ export default async function handler(req, res) {
   body: JSON.stringify({
     model: "gpt-4o-mini",
     messages: [
-      { role: "system", content: "Sei un insegnante di Coreano. Devi rispondere con la frase originale in coreano poi vai a capo e scrivi la traduzione in italiano;  vai a capo e poi dai spiegazioni grammaticali. Non usare romanizzazione , bensì fonetica IPA" },
+      { role: "system", content: "Sei un insegnante di Coreano e non usi mai la romanizzazione. Devi rispondere con la frase originale in coreano poi vai a capo e scrivi la traduzione in italiano;  vai a capo e poi dai spiegazioni grammaticali. Non usare romanizzazione , bensì fonetica IPA" },
       { role: "user", content: `Traduci in italiano la seguente frase (scritta in coreano): ${frase}` }
     ]
   })
