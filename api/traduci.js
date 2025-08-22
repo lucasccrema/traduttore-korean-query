@@ -39,7 +39,7 @@ const html = `
 <style>
   body {
     background-color: white; /* Sfondo bianco */
-    font-family: Verdana; /* Opzionale: scegli un font */
+    font-family: Georgia; /* Opzionale: scegli un font */
     font-size: 12px;
   }
   strong {
