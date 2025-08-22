@@ -28,7 +28,7 @@ export default async function handler(req, res) {
 });
     const data = await response.json();
     const traduzione = data.choices?.[0]?.message?.content || "Errore: nessuna traduzione trovata";
-
+    const traduzioneConLineBreaks = traduzione.replace(/\n/g, '<br>');
     // Crea l'HTML con sfondo bianco e testo in grassetto
 const html = `
 <!DOCTYPE html>
@@ -47,6 +47,7 @@ const html = `
 </head>
 <body>
   <p>${traduzione.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')}</p>
+  <p>${traduzioneConLineBreaks}</p>
 </body>
 </html>
 `;
