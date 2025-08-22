@@ -28,8 +28,32 @@ export default async function handler(req, res) {
 });
     const data = await response.json();
     const traduzione = data.choices?.[0]?.message?.content || "Errore: nessuna traduzione trovata";
-res.setHeader("Content-Type", "text/plain; charset=utf-8");
-    res.send(traduzione);
+
+    // Crea l'HTML con sfondo bianco e testo in grassetto
+const html = `
+<!DOCTYPE html>
+<html>
+<head>
+<title>Traduzione</title>
+<style>
+  body {
+    background-color: white; /* Sfondo bianco */
+    font-family: sans-serif; /* Opzionale: scegli un font */
+  }
+  strong {
+    font-weight: bold; /* Testo in grassetto */
+  }
+</style>
+</head>
+<body>
+  <p>${traduzione.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')}</p>
+</body>
+</html>
+`;
+    
+    res.setHeader("Content-Type", "text/plain; charset=utf-8");
+    res.send(html); // Invia l'HTML
+    //res.send(traduzione);
    // res.status(200).json({ traduzione });
   } catch (error) {
     console.error(error);
