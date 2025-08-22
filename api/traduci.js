@@ -40,7 +40,7 @@ const html = `
   body {
     background-color: white; /* Sfondo bianco */
     font-family: Georgia; /* Opzionale: scegli un font */
-    font-size: 12px;
+    font-size: 14px;
   }
   strong {
     font-weight: bold; /* Testo in grassetto */
